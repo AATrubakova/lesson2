@@ -11,7 +11,8 @@ public class HomeWork2 {
         System.out.println("3. Метод возвращает true, если число отрицательное и false - если положительное");
         System.out.println("4. Метод печатает строку указанное число раз");
         System.out.println("5. Метод isYearLeap() проверяет является ли год високосным");
-        int method = scanner.nextInt();
+        // todo изучить конструкцию
+        int method = Integer.parseInt(scanner.nextLine());
         switch (method) {
             case 1:
                 System.out.println("Введите целое число x1:");
@@ -28,18 +29,14 @@ public class HomeWork2 {
             case 3:
                 System.out.println("Введите целое число b:");
                 int b = scanner.nextInt();
-                isNumberAboveZero(b);
                 System.out.println(isNumberAboveZero(b));
                 break;
             case 4:
                 System.out.println("Введите строку:");
-                String s = scanner.nextLine();
+                String str = scanner.nextLine();
                 System.out.println("Введите число повторов n:");
-
-//                System.out.println("Введите строку:" + s);
                 int n = scanner.nextInt();
-//                System.out.println("Введите число повторов n:" + n);
-                printStringN(s,n);
+                printStringN(str,n);
                 break;
             case 5:
                 System.out.println(isYearLeap());
@@ -50,22 +47,19 @@ public class HomeWork2 {
     public static boolean sumOfNumbers(int x1, int x2) {
         int sum = x1 + x2;
         System.out.println("Сумма чисел " + x1 + " + " + x2 + " = " + sum);
-        if (sum >= 10 && sum <= 20)
-            return true;
-        else
-            return false;
+        return sum >= 10 && sum <= 20;
     }
     public static void whatIsNumber(int a) {
         if (a >= 0)
             System.out.println("Число " + a + " положительное!");
         else
-            System.out.println("Число " + a + " отрицательное!");;
+            System.out.println("Число " + a + " отрицательное!");
     }
     public static boolean isNumberAboveZero(int b) {
         return b < 0;
     }
-    public static void printStringN(String s, int n) {
-        for (int i=0; i < n; i++) System.out.println(s);
+    public static void printStringN(String str, int n) {
+        for (int i=0; i < n; i++) System.out.println(str);
     }
     public static boolean isYearLeap() {
         System.out.println("Введите год:");
