@@ -11,7 +11,8 @@ public class HomeWork2 {
         System.out.println("3. Метод возвращает true, если число отрицательное и false - если положительное");
         System.out.println("4. Метод печатает строку указанное число раз");
         System.out.println("5. Метод isYearLeap() проверяет является ли год високосным");
-        int method = scanner.nextInt();
+        // todo изучить конструкцию
+        int method = Integer.parseInt(scanner.nextLine());
         switch (method) {
             case 1:
                 System.out.println("Введите целое число x1:");
@@ -31,7 +32,7 @@ public class HomeWork2 {
                 System.out.println(isNumberAboveZero(b));
                 break;
             case 4:
-                System.out.println("Введите строку:\n");
+                System.out.println("Введите строку:");
                 String str = scanner.nextLine();
                 System.out.println("Введите число повторов n:");
                 int n = scanner.nextInt();
